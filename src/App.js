@@ -5,11 +5,13 @@ import { useState } from 'react';
 import UserForm from './UserForm';
 import Greeting from './Greeting';
 function App() {
+  const [userInput, setUserInput] = useState("");
+  
   return (
     <div>
     <Header/>
-    <UserForm/>
-    {/* <Greeting/> */}
+    <UserForm setUserInput={setUserInput} />
+    <Greeting myName1={userInput}/>
     </div>
     
    

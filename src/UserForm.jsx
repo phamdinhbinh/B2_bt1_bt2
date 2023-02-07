@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import Greeting from './Greeting';
-export default function UserForm() {
-    const [userInput, setUserInput] = useState("");
+export default function UserForm({setUserInput} , {userInput}) {
+    // const [userInput, setUserInput] = useState("");
     const handleInputChange = (e) => {
     setUserInput(e.target.value);
     };
@@ -16,7 +16,8 @@ export default function UserForm() {
      onChange={handleInputChange}
      />
     
-     <Greeting myName1={userInput}/>
+     {/* <Greeting myName1={userInput}/> */}
     </div>
     );
    }
+   
